@@ -47,6 +47,12 @@ contract LeaderboardCounterSystem is System {
         player.deaths = newValue;
     }
 
+    function updatePlayerName(string memory newName) public {
+        address playerAddress = msg.sender;
+        Player storage player = players[playerAddress];
+        player.name = newName;
+    }
+
     function getPlayerStats(address playerAddress) public view returns (string memory, uint32, uint32) {
         Player storage player = players[playerAddress];
         return (player.name, player.kills, player.deaths);
