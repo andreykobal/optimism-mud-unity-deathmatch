@@ -7,13 +7,6 @@
       "dependencies": {},
       "hash": "f2773f585e762480c835ac718b82b87cb111e500"
     },
-    "com.emergenceland.unimud": {
-      "version": "https://github.com/emergenceland/unimud.git?path=Packages/UniMUD",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "0b4859426bc8c550f57e63339979244dfc65c9ba"
-    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -48,7 +41,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.0.3",
+      "version": "2.0.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

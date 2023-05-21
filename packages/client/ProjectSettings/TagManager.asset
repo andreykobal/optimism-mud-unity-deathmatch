@@ -3,23 +3,28 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Dirt
+  - Wood
+  - Metal
+  - Water
+  - Mud
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Target
   - Water
   - UI
-  - Players
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Agent
+  - Projectile
+  - FPV
+  - AgentKCC
+  - Interaction
+  - Pickup
+  - MapOnly
   - 
   - 
   - 

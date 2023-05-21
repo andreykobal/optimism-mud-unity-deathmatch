@@ -1,0 +1,32 @@
+BR200 Release History
+
+1.1.0
+- Revamped UI.
+- Few mobile-related fixes input.
+- Improved menu performance.
+- Updated Fusion SDK to 1.1.5-643.
+- Updated KCC to 1.1.8.
+
+1.0.2
+- Added dialog to enable HTTP requests (Project Settings => Player => Allow downloads over HTTP*) in Unity 2022.1 and newer (required by Multiplay SDK when running Linux build on Multiplay platform).
+- Added basic support for mobile input (can be tested on high-end phones, the game was not designed for mobile).
+- Fixed player data initialization after an exception from Unity Services.
+- Fixed visibility of other players on reconnect.
+- Updated Fusion SDK to 1.1.4-604.
+
+1.0.1
+- Added Template scene (contains minimum objects to run the game, can be used for duplication and adding custom gameplay).
+- Increased input buffer size for correct smoothing on very high refresh rate.
+- Fixed input smoothing algorithm.
+- Default look responsivity on AgentBase set to 20ms (was 25ms).
+- Changed managed code stripping level to Minimal, some types explicitly preserved from stripping (fixed incorrect Fusion execution order in builds).
+- Added tools for easier debug input => camera chain over time.
+- Fixed propagation of Elevator position delta to KCC.
+- Fixed ElevatorConnector initialization.
+- Fixed SceneContext being correctly assigned to scene objects before Spawned().
+- Fixed proxy animations while standing still on elevator.
+- Added elevators to Game scene.
+- Updated Fusion SDK to 1.1.2-579.
+
+1.0
+- Initial release.
