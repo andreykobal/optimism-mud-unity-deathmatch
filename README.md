@@ -205,38 +205,34 @@ Ensure you have the necessary dependencies installed:
 * Clone the Project:
 
 Clone the Optimism Deathmatch project repository using git:
-bash
-Copy code
-git clone <repository_url>
+
+```git clone https://github.com/andreykobal/optimism-mud-unity-deathmatch```
 Install Dependencies:
 
 Navigate to the project's root directory:
 
-bash
-Copy code
-cd optimism-deathmatch
+
+```cd optimism-deathmatch```
 Install the project dependencies using pnpm:
 
-Copy code
-pnpm install
-Configure Optimism Network:
+```pnpm install```
+###Configure Optimism Network:
 
 In the packages/contracts directory, create a .env file with the following content:
 rust
 Copy code
 ETH_NETWORK='localOptimism'
 LATTICE_SERVER='http://localhost:8000'
-Deploy Contracts to Optimism:
+### Deploy Contracts to Optimism:
 
 Deploy the contracts to the Optimism network by running the following command:
-arduino
-Copy code
-pnpm run deploy:optimism
+
+```pnpm run deploy:optimism```
 Start the Optimism Environment:
 
 Start the Optimism environment using Foundry:
-Copy code
-foundry up
+
+```foundry up```
 Run the Unity Game:
 
 Open the Unity project in Unity Editor.
