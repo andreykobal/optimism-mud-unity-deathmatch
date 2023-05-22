@@ -37,7 +37,7 @@ To get started with Optimism Deathmatch, follow these steps:
 1. :octocat: Clone this repository.
 2. :wrench: Install the necessary prerequisites such as Git, Foundry, Node.js, pnpm, and Unity.
 3. :computer: Set up the MUD Template Unity by following the instructions provided in the tutorial.
-4. :gear: Customize and integrate the Fusion BR sample with the MUD framework to align with your project's vision.
+4. :gear: Customize and integrate the Deathmatch sample with the MUD framework to align with your project's vision.
 5. :rocket: Deploy the LeaderboardCounterSystem smart contract to the Optimism network using the provided deployment instructions.
 6. :globe_with_meridians: Configure the network settings and endpoints in your project to connect to Optimism Goerli.
 7. :building_construction: Build and run the project in Unity to experience the adrenaline-pumping Optimism Deathmatch.
