@@ -1,4 +1,17 @@
-# MUD Template Unity
+# Optimism Deathmatch with MUD Framework
+
+<img width="400" alt="cover-logo-op-deathmatch" src="https://github.com/andreykobal/optimism-mud-unity-deathmatch/assets/19206978/c0dbaaf5-2ade-4f48-963a-2bf7a8c9c38d">
+
+Optimism Deathmatch with MUD Framework is a powerful infrastructure tool for creating AAA deathmatch on-chain games using Unity. It combines the scalability and cost-efficiency of the Optimism network with the immersive gameplay and development capabilities of the MUD (Multi-User Dungeon) framework.
+
+## Features
+* ⚡ Seamless integration of Unity and MUD framework for a smooth game development experience.
+* 🎮 High-performance gameplay with advanced features like hitscan weapons, recoil system, dynamic levels, and more.
+* 📊 Efficient player management and global leaderboards with the LeaderboardCounterSystem smart contract.
+* 🔄 Real-time updates and interactions using the MUD Template Unity for autogenerating C# definitions and subscribing to table updates.
+* 🚀 Easy deployment to the Optimism network for testing and production environments.
+
+
 
 ## Prerequisites
 
