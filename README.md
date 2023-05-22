@@ -4,7 +4,7 @@
 
 # Optimism Deathmatch :crossed_swords:
 
-Welcome to Optimism Deathmatch, the ultimate competitive gaming experience powered by the cutting-edge MUD (Multi-User Dungeon) framework and deployed on the Optimism network. Prepare yourself for fast-paced gameplay, advanced features, and a seamless gaming experience like never before. :video_game:
+Welcome to Optimism Deathmatch, the ultimate competitive gaming experience powered by the cutting-edge MUD framework and deployed on the Optimism network. Prepare yourself for fast-paced gameplay, advanced features, and a seamless gaming experience like never before. :video_game:
 
 ## Features :rocket:
 
