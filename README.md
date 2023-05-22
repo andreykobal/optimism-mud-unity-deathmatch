@@ -211,11 +211,12 @@ Install Dependencies:
 
 Navigate to the project's root directory:
 
-
 ```cd optimism-deathmatch```
+
 Install the project dependencies using pnpm:
 
 ```pnpm install```
+
 ###Configure Optimism Network:
 
 In the packages/contracts directory, create a .env file with the following content:
@@ -223,6 +224,7 @@ rust
 Copy code
 ETH_NETWORK='localOptimism'
 LATTICE_SERVER='http://localhost:8000'
+
 ### Deploy Contracts to Optimism:
 
 Deploy the contracts to the Optimism network by running the following command:
