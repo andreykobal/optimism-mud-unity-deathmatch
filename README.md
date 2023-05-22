@@ -144,3 +144,67 @@ You can deploy to any non-local chain with `cd packages/contracts && pnpm run de
 Be sure to properly set the ChainID and RPC urls in the **NetworkManager** component.
 
 UniMUD currently doesn’t implement the faucet service, so you must manually send testnet funds to your address. Your address is logged in Debug mode, but you can also create a UI component to fetch and display it from the NetworkManager.
+
+## Deploying to Optimism
+
+To deploy your Optimism Deathmatch project to the Optimism network, follow these steps:
+
+### Setup Optimism Environment:
+
+Ensure you have the necessary dependencies installed:
+
+* git (download: https://git-scm.com/downloads)
+* foundry (forge, anvil, cast) (download: https://github.com/lattice-works/foundry#installation)
+* node.js (v16+) (download: https://nodejs.org)
+* pnpm (after installing Node.js: npm install --global pnpm)
+* Unity (download: https://unity.com)
+* The .NET SDK (7.0) (download: https://dotnet.microsoft.com/download)
+* If you're using Windows:
+
+* Install git bash (https://gitforwindows.org)
+* Install Node.js, including "native modules" (keep the checkmark enabled during installation, as it's enabled by default)
+* Clone the Project:
+
+Clone the Optimism Deathmatch project repository using git:
+bash
+Copy code
+git clone <repository_url>
+Install Dependencies:
+
+Navigate to the project's root directory:
+
+bash
+Copy code
+cd optimism-deathmatch
+Install the project dependencies using pnpm:
+
+Copy code
+pnpm install
+Configure Optimism Network:
+
+In the packages/contracts directory, create a .env file with the following content:
+rust
+Copy code
+ETH_NETWORK='localOptimism'
+LATTICE_SERVER='http://localhost:8000'
+Deploy Contracts to Optimism:
+
+Deploy the contracts to the Optimism network by running the following command:
+arduino
+Copy code
+pnpm run deploy:optimism
+Start the Optimism Environment:
+
+Start the Optimism environment using Foundry:
+Copy code
+foundry up
+Run the Unity Game:
+
+Open the Unity project in Unity Editor.
+Open the main scene (packages/client/Assets/Scenes/Main.unity).
+Press the play button to start the game.
+Congratulations! Your Optimism Deathmatch project is now deployed on the Optimism network, and you can enjoy playing and testing it in the Unity game environment.
+
+Note: Make sure to properly set the ChainID and RPC URLs in the NetworkManager component in Unity to connect to the Optimism network.
+
+Enjoy the future of competitive gaming with Optimism Deathmatch!
