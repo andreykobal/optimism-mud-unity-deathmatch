@@ -2,16 +2,55 @@
 
 <img width="400" alt="cover-logo-op-deathmatch" src="https://github.com/andreykobal/optimism-mud-unity-deathmatch/assets/19206978/c0dbaaf5-2ade-4f48-963a-2bf7a8c9c38d">
 
-Optimism Deathmatch with MUD Framework is a powerful infrastructure tool for creating AAA deathmatch on-chain games using Unity. It combines the scalability and cost-efficiency of the Optimism network with the immersive gameplay and development capabilities of the MUD (Multi-User Dungeon) framework.
+# Optimism Deathmatch :crossed_swords:
 
-## Features
-* ⚡ Seamless integration of Unity and MUD framework for a smooth game development experience.
-* 🎮 High-performance gameplay with advanced features like hitscan weapons, recoil system, dynamic levels, and more.
-* 📊 Efficient player management and global leaderboards with the LeaderboardCounterSystem smart contract.
-* 🔄 Real-time updates and interactions using the MUD Template Unity for autogenerating C# definitions and subscribing to table updates.
-* 🚀 Easy deployment to the Optimism network for testing and production environments.
+Welcome to Optimism Deathmatch, the ultimate competitive gaming experience powered by the cutting-edge MUD (Multi-User Dungeon) framework and deployed on the Optimism network. Prepare yourself for fast-paced gameplay, advanced features, and a seamless gaming experience like never before. :video_game:
 
+## Features :rocket:
 
+- :boom: Multiple Gameplay Modes: Engage in intense battles across various modes, including Battle Royale, Elimination, and Deathmatch.
+- :gun: Hitscan Weapons with Projectile Data Ring Buffer: Wield powerful hitscan weapons that provide precise and instantaneous targeting.
+- :earth_americas: Headless Server Instance: Configure and customize your gaming experience with ease using command-line arguments.
+- :dart: Weapon Dynamics and Recoil System: Feel the authentic kickback of each weapon with dynamic dispersion, recoil, and recoil patterns.
+- :arrows_counterclockwise: Tick-Accurate Animation System: Immerse yourself in fluid and realistic animations that synchronize perfectly with the game's tick system.
+- :zap: Advanced Interest Management: Experience seamless gameplay with advanced interest management, reducing latency and enhancing performance.
+- :joystick: Advanced Input Processing: Enjoy precise and responsive controls with custom look smoothing for an intuitive and immersive gaming experience.
+- :muscle: Health & Damage System: Strategize and manage your health as you engage in fierce battles.
+- :dagger: Projectile Piercing: Explore the dynamic world of projectile physics with piercing capabilities.
+- :world_map: Semi-Procedurally Generated Levels: Explore unique and ever-changing battlegrounds with semi-procedurally generated levels.
+- :fire: And much more: Discover a plethora of additional features, including item boxes, pickups, grenades, jetpacks, spectator mode, camera shake, and matchmaking.
+
+## Smart Contract: LeaderboardCounterSystem :trophy:
+
+The LeaderboardCounterSystem smart contract is the heart of the Optimism Deathmatch project. It manages player statistics and global leaderboards, ensuring a fair and transparent gaming experience for all participants. The smart contract offers the following functionality:
+
+- :arrow_up: Incrementing Kills: Players can increment their kill count, contributing to their overall performance in the game.
+- :arrow_down: Incrementing Deaths: Players can increment their death count, providing insights into their resilience and gameplay strategies.
+- :trophy: Incrementing Score: A scoring mechanism allows players to earn points based on their in-game achievements, climbing up the leaderboard.
+- :bar_chart: Player Statistics: The smart contract stores and manages player statistics, including name, kill count, death count, and score.
+- :globe_with_meridians: Global Leaderboard: Players can access the global leaderboard to see the top players and their corresponding scores.
+
+## Getting Started :rocket:
+
+To get started with Optimism Deathmatch, follow these steps:
+
+1. :octocat: Clone this repository.
+2. :wrench: Install the necessary prerequisites such as Git, Foundry, Node.js, pnpm, and Unity.
+3. :computer: Set up the MUD Template Unity by following the instructions provided in the tutorial.
+4. :gear: Customize and integrate the Fusion BR sample with the MUD framework to align with your project's vision.
+5. :rocket: Deploy the LeaderboardCounterSystem smart contract to the Optimism network using the provided deployment instructions.
+6. :globe_with_meridians: Configure the network settings and endpoints in your project to connect to Optimism Goerli.
+7. :building_construction: Build and run the project in Unity to experience the adrenaline-pumping Optimism Deathmatch.
+
+## Documentation :book:
+
+For detailed documentation on how to use the LeaderboardCounterSystem smart contract in Unity and deploy the project to the Optimism network, refer to the [Documentation](/docs) directory.
+
+## Community and Support :bulb:
+
+For any questions, suggestions, or support, please reach out to our team at [email protected]
+
+Let the battle begin! Step into the future of gaming with Optimism Deathmatch. :crossed_swords:
 
 ## Prerequisites
 
