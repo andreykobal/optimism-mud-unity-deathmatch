@@ -22,7 +22,7 @@ Welcome to Optimism Deathmatch, the ultimate competitive gaming experience power
 
 ## Smart Contract: LeaderboardCounterSystem :trophy:
 
-```
+```solidity
 pragma solidity >=0.8.0;
 
 import { System } from "@latticexyz/world/src/System.sol";
