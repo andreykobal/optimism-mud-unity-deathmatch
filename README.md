@@ -169,7 +169,7 @@ The smart contract offers the following functionality:
 - :bar_chart: Player Statistics: The smart contract stores and manages player statistics, including name, kill count, death count, and score.
 - :globe_with_meridians: Global Leaderboard: Players can access the global leaderboard to see the top players and their corresponding scores.
 
-##Hall Of Reflections 
+## Hall Of Reflections 
 
 The `HallOfReflections` contract allows users to mint reflections of their owned ERC-721 or ERC-1155 NFTs and interact with those reflections. Each reflection is associated with a character avatar file and a character bio. Interactions with reflections are recorded in the Hall of Fame, which keeps track of the number of interactions for each reflection.
 
