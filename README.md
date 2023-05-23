@@ -8,18 +8,20 @@ Welcome to Optimism Deathmatch, the ultimate competitive gaming experience power
 
 ## Features :rocket:
 
-- :boom: Multiple Gameplay Modes: Engage in intense battles across various modes, including Battle Royale, Elimination, and Deathmatch.
-- :gun: Hitscan Weapons with Projectile Data Ring Buffer: Wield powerful hitscan weapons that provide precise and instantaneous targeting.
-- :earth_americas: Headless Server Instance: Configure and customize your gaming experience with ease using command-line arguments.
-- :dart: Weapon Dynamics and Recoil System: Feel the authentic kickback of each weapon with dynamic dispersion, recoil, and recoil patterns.
-- :arrows_counterclockwise: Tick-Accurate Animation System: Immerse yourself in fluid and realistic animations that synchronize perfectly with the game's tick system.
-- :zap: Advanced Interest Management: Experience seamless gameplay with advanced interest management, reducing latency and enhancing performance.
-- :joystick: Advanced Input Processing: Enjoy precise and responsive controls with custom look smoothing for an intuitive and immersive gaming experience.
-- :muscle: Health & Damage System: Strategize and manage your health as you engage in fierce battles.
-- :dagger: Projectile Piercing: Explore the dynamic world of projectile physics with piercing capabilities.
-- :world_map: Semi-Procedurally Generated Levels: Explore unique and ever-changing battlegrounds with semi-procedurally generated levels.
-- :fire: And much more: Discover a plethora of additional features, including item boxes, pickups, grenades, jetpacks, spectator mode, camera shake, and matchmaking.
+* Optimism Deathmatch is a game-changing project that combines the power of cutting-edge technologies to deliver an immersive and exhilarating gaming experience. 🚀
 
+* ✨ Game-ready: Dive into fast-paced battles and compete with other players in intense multiplayer matches. Engage in thrilling gameplay modes, including Battle Royale, Elimination, and Deathmatch. Experience the adrenaline rush as you strategize, outsmart opponents, and dominate the leaderboard. 🏆
+
+* 🛠️ Tool for Developers: Optimism Deathmatch serves as a powerful tool for developers, providing a comprehensive framework for building online multiplayer games. With our MUD template, developers can create their own game worlds, customize gameplay mechanics, and unleash their creativity to bring unique gaming experiences to life. 🎮
+
+* ⚡ Optimism Network: We leverage the Optimism network, a layer 2 scalability solution for Ethereum, to provide fast and cost-effective transactions. By harnessing the power of Optimism, players can enjoy seamless gameplay with reduced latency and enhanced performance. ⚡
+
+* 🔧 MUD Framework: Optimism Deathmatch is built upon the MUD framework, offering a robust foundation for networking, synchronization, and multiplayer interactions. The MUD framework empowers developers with powerful tools to create dynamic game worlds and engaging gameplay mechanics. 🌐
+
+* 🗃️ NFT.Storage: Our project utilizes NFT.Storage, a decentralized storage solution for NFTs, to store and manage avatars and in-game assets. NFT.Storage ensures the security, reliability, and uniqueness of digital assets, enabling players to trade and showcase their personalized creations. 🖼️
+
+
+* 🔥 And much more: Discover a plethora of additional features, including item boxes, pickups, grenades, jetpacks, spectator mode, camera shake, and matchmaking.
 ## Smart Contract: LeaderboardCounterSystem :trophy:
 
 The ```LeaderboardCounterSystem``` smart contract is an integral part of the Optimism Deathmatch game. It manages player statistics and the global leaderboard, allowing players to track their progress and compete with others. The contract utilizes the ```IncrementSystem``` contract to provide atomic increment operations for counting player actions.
