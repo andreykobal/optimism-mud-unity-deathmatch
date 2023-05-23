@@ -22,7 +22,10 @@ Welcome to Optimism Deathmatch, the ultimate competitive gaming experience power
 
 ## Smart Contract: LeaderboardCounterSystem :trophy:
 
+The ```LeaderboardCounterSystem``` smart contract is an integral part of the Optimism Deathmatch game. It manages player statistics and the global leaderboard, allowing players to track their progress and compete with others. The contract utilizes the ```IncrementSystem``` contract to provide atomic increment operations for counting player actions.
+
 ```solidity
+solidityCopy code
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0;
 
@@ -50,42 +53,68 @@ contract LeaderboardCounterSystem is System {
         incrementSystem = IncrementSystem(_incrementSystemAddress);
     }
 
+    /**
+     * @dev Increment the kills counter for the player and return the updated value.
+     */
     function incrementKills() public returns (uint32) {
         uint32 newValue = incrementSystem.increment();
         updatePlayerKills(newValue);
         return newValue;
     }
 
+    /**
+     * @dev Increment the deaths counter for the player and return the updated value.
+     */
     function incrementDeaths() public returns (uint32) {
         uint32 newValue = incrementSystem.increment();
         updatePlayerDeaths(newValue);
         return newValue;
     }
 
+    /**
+     * @dev Increment the score counter for the player and return the updated value.
+     * @param value The value to add to the score.
+     */
     function incrementScore(uint32 value) public returns (uint32) {
         uint32 newValue = incrementSystem.increment() + (value * 100); // Multiply the value by 100
         updatePlayerScore(newValue);
         return newValue;
     }
 
+    /**
+     * @dev Update the kills counter for the player.
+     * @param newValue The new value for the kills counter.
+     */
     function updatePlayerKills(uint32 newValue) private {
         address playerAddress = msg.sender;
         Player storage player = players[playerAddress];
         player.kills = newValue;
     }
 
+    /**
+     * @dev Update the deaths counter for the player.
+     * @param newValue The new value for the deaths counter.
+     */
     function updatePlayerDeaths(uint32 newValue) private {
         address playerAddress = msg.sender;
         Player storage player = players[playerAddress];
         player.deaths = newValue;
     }
 
+    /**
+     * @dev Update the score counter for the player.
+     * @param newValue The new value for the score counter.
+     */
     function updatePlayerScore(uint32 newValue) private {
         address playerAddress = msg.sender;
         Player storage player = players[playerAddress];
         player.score = newValue / 100; // Divide the score by 100 to get the actual value
     }
 
+    /**
+     * @dev Update the name of the player.
+     * @param newName The new name for the player.
+     */
     function updatePlayerName(string memory newName) public {
         address playerAddress = msg.sender;
         Player storage player = players[playerAddress];
@@ -93,14 +122,27 @@ contract LeaderboardCounterSystem is System {
         // TO DO: Get photon nick name
     }
 
-    function getPlayerStats(address playerAddress) public view returns (string memory, uint32, uint32, uint32) {
+    /**
+     * @dev Get the statistics of a player.
+     * @param playerAddress The address of the player.
+     * @return name The name of the player.
+     * @return kills The number of kills by the player.
+     * @return deaths The number of deaths of the player.
+     * @return score The score of the player.
+     */
+    function getPlayerStats(address playerAddress) public view returns (string memory name, uint32 kills, uint32 deaths, uint32 score) {
         Player storage player = players[playerAddress];
         return (player.name, player.kills, player.deaths, player.score);
     }
 
-    function getGlobalLeaderboard() public view returns (address[] memory, uint32[] memory) {
-        uint32[] memory scores = new uint32[](1);
-        scores[0] = Counter.get(ScoreKey);
+    /**
+     * @dev Get the global leaderboard.
+     * @return addresses The addresses of the top players on the leaderboard.
+     * @return scores The scores of the top players on the leaderboard.
+     */
+    function getGlobalLeaderboard() public view returns (address[] memory addresses, uint32[] memory scores) {
+        uint32[] memory score = new uint32[](1);
+        score[0] = Counter.get(ScoreKey);
         address[] memory addresses = new address[](1);
         addresses[0] = msg.sender;
         return (addresses, scores);
@@ -111,9 +153,13 @@ abstract contract IncrementSystem {
     function increment() public virtual returns (uint32);
 }
 
+
+
 ```
 
-The LeaderboardCounterSystem smart contract is the heart of the Optimism Deathmatch project. It manages player statistics and global leaderboards, ensuring a fair and transparent gaming experience for all participants. The smart contract offers the following functionality:
+The LeaderboardCounterSystem contract allows players to interact with the game and track their statistics. It utilizes the IncrementSystem contract for atomic increment operations. The contract provides functions to increment kills, deaths, and scores, as well as update player names and retrieve player statistics. The global leaderboard can also be accessed to see the top players and their scores.
+
+The smart contract offers the following functionality:
 
 - :arrow_up: Incrementing Kills: Players can increment their kill count, contributing to their overall performance in the game.
 - :arrow_down: Incrementing Deaths: Players can increment their death count, providing insights into their resilience and gameplay strategies.
