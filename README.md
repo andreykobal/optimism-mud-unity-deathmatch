@@ -527,23 +527,75 @@ Copy code
 ETH_NETWORK='localOptimism'
 LATTICE_SERVER='http://localhost:8000'
 
-### Deploy Contracts to Optimism:
+# Deployment On Optimism Testnet
 
-Deploy the contracts to the Optimism network by running the following command:
+Two Approaches,
 
-```pnpm run deploy:optimism```
-Start the Optimism Environment:
+### 1. MUD provides the DeploymentManager to deploy smart contracts:
 
-Start the Optimism environment using Foundry:
+This tool will use the `mud.config.ts` to detect all systems, tables, modules, and namespaces in the World and will deploy them to the chain specified in your Foundry profile.
 
-```foundry up```
-Run the Unity Game:
+1. Run `cd packages/contract`
+2. Create a new wallet by running `cast wallet new`
+3. Copy your private key and paste it in the `.env` file
+4. Get some faucet on this address from here, [https://faucet.paradigm.xyz/](https://faucet.paradigm.xyz/)
+5. Run by development client using `pnmp dev`
+6. The Run **`pnpm mud deploy --profile optimism-testnet`** to deploy on optimism testnet
 
-Open the Unity project in Unity Editor.
-Open the main scene (packages/client/Assets/Scenes/Main.unity).
-Press the play button to start the game.
-Congratulations! Your Optimism Deathmatch project is now deployed on the Optimism network, and you can enjoy playing and testing it in the Unity game environment.
+When using the deployer, you must set the private key of the deployer using the `PRIVATE_KEY` environment variable. You can make this easier by using `[dotenv`(opens in a new tab)](https://www.npmjs.com/package/dotenv) before running `pnpm mud deploy` in your deployment script.
 
-Note: Make sure to properly set the ChainID and RPC URLs in the NetworkManager component in Unity to connect to the Optimism network.
+To set the profile used by the deployer, either set your `FOUNDRY_PROFILE` environment variable, or pass `--profile <profileName>` to the deployer (eg: `mud deploy --profile optimism-testnet`).
 
-Enjoy the future of competitive gaming with Optimism Deathmatch!
+### **`devnode`**
+
+Runs Anvil with a block time of 1s, and no base fee (to make it possible for unfunded account to send transactions).
+
+This command also wipes the Anvil cache. Anvil cache blow-up problems won’t happen to you anymore 🙂
+
+```
+pnpm mud devnode
+```
+
+### Optimism Testnet Details
+
+Get the optimism testnet api key from creating a new project on Alchemy Dashboard [https://dashboard.alchemy.com/](https://dashboard.alchemy.com/) select Optimism in chains and Goerli testnet in networks.
+
+- We'll be deploying to Optimism. Get your metamask private key. You can get your key by clicking Account Details --> Export Private Key from your Metamask extension. **NEVER SHARE YOUR PRIVATE WITH ANYONE AND DON'T PUSH IT TO GITHUB!** Make sure to have some ETH in your Optimism account.
+- Add your Alchemy API Key.
+- *(Optional)* Get your Optimism Etherscan API key to verify the smart contract. You can create an account and follow the steps to create an API key over **[here](https://optimistic.etherscan.io/myapikey)**.
+
+### Deployment
+
+It will be read from the `eth_rpc_url` configuration field of the Foundry profile.
+
+<aside>
+💡 Example Profile:
+
+**[profile.optimism-testnet]**
+
+**eth_rpc_url = "**https://opt-testnet.g.alchemy.com/v2/<YOUR_API_KEY>**"**
+
+Then use:
+
+```solidity
+# to deploy to optimism testnet
+pnpm mud deploy --profile optimism-testnet
+```
+
+</aside>
+
+### Approach 2:
+
+If you find this difficult, you can use `forge` for deployment of smart contracts as MUD uses Foundry.
+1. Prepare your env like this
+
+```
+ export RPC_URL=https://opt-testnet.g.alchemy.com/v2/<YOUR_API_KEY>
+ export PRIVATE_KEY=<YOUR_PRIVATE_KEY>
+ export ETHERSCAN_API_KEY=<YOUR_ETHERSCAN_API_KEY>
+
+```
+
+1. Run `forge create SMART-CONTRACT-NAME --rpc-url=$RPC_URL --private-key=$PRIVATE_KEY --verify`
+
+You can also get gas reports by running: `forge test --gas-report`
